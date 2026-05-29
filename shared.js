@@ -60,6 +60,7 @@ function injectFooter() {
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="about.html">About</a>
+          <a href="about-v2.html">About v2</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-col">
