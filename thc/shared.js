@@ -11,7 +11,9 @@ function injectNav(activePage) {
     { id: 'home',     label: 'Home',     href: 'index.html'   },
     { id: 'services', label: 'Services', href: 'services.html'},
     { id: 'about',    label: 'About',    href: 'about.html'   },
+    { id: 'about-v2', label: 'About v2', href: 'about-v2.html' },
     { id: 'contact',  label: 'Contact',  href: 'contact.html' },
+    
   ];
 
   const links = pages.map(p =>
