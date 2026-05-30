@@ -10,8 +10,7 @@ function injectNav(activePage) {
   const pages = [
     { id: 'home',     label: 'Home',     href: 'index.html'   },
     { id: 'services', label: 'Services', href: 'services.html'},
-    { id: 'about',    label: 'About',    href: 'about.html'   },
-    { id: 'about-v2', label: 'About v2', href: 'about-v2.html' },
+    { id: 'about-v2', label: 'About', href: 'about-v2.html' },
     { id: 'contact',  label: 'Contact',  href: 'contact.html' },
     
   ];
@@ -59,8 +58,7 @@ function injectFooter() {
           <div class="footer-col-h">Pages</div>
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="about-v2.html">About v2</a>
+          <a href="about-v2.html">About</a>
           <a href="contact.html">Contact</a>
         </div>
         <div class="footer-col">
