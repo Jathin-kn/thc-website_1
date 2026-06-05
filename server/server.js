@@ -6,7 +6,7 @@ const cors       = require('cors');
 const app = express();
 
 app.use(cors({
-  origin: 'https://www.thehospitalcare.in'
+  origin: ['https://www.thehospitalcare.in', 'https://thehospitalcare.in']
 }));
 app.use(express.json());
 
