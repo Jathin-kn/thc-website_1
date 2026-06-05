@@ -404,3 +404,28 @@ a.contact-card-value:hover { color: var(--green); }
   .social-links { flex-direction: column; }
   .social-link { justify-content: center; }
 }
+
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .contact-hero { min-height: 50vh; }
+  .contact-hero-body { padding: 0 5vw 64px; }
+  .contact-hero-body h1 { font-size: clamp(28px, 9vw, 44px); }
+  .contact-hero-body p { font-size: 15px; }
+
+  .contact-main {
+    grid-template-columns: 1fr;
+    padding: 56px 5vw 80px;
+    gap: 40px;
+  }
+
+  .form-heading { font-size: 22px; }
+  .form-sub { font-size: 14px; }
+  .form-row.two-col { flex-direction: column; gap: 0; }
+  .form-submit { width: 100%; justify-content: center; }
+
+  .contact-options { padding-top: 0; }
+  .wa-card-title { font-size: 16px; }
+  .social-links { flex-wrap: wrap; }
+  .social-link { flex: 1; justify-content: center; min-width: 120px; }
+}

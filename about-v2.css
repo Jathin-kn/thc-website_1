@@ -390,3 +390,42 @@
   .a2-stat:last-child { border-bottom: none; }
   .a2-acc-title { font-size: 16px; }
 }
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .a2-hero { grid-template-columns: 1fr; min-height: auto; }
+  .a2-hero-left { padding: 80px 5vw 56px; }
+  .a2-hero-text h1 { font-size: clamp(32px, 9vw, 50px); }
+  .a2-hero-text p { font-size: 15px; }
+  .a2-hero-right { min-height: 300px; }
+  .a2-hero-stat-block { flex-wrap: wrap; }
+  .a2-stat { min-width: 50%; }
+  .a2-stat:nth-child(2) { border-right: none; }
+  .a2-stat:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.12); border-right: none; }
+
+  .a2-marquee { animation-duration: 15s; }
+
+  .a2-what-row,
+  .a2-what-row.reverse { grid-template-columns: 1fr; }
+  .a2-what-row-num { display: none; }
+  .a2-what-row-img { min-height: 260px; order: 1 !important; }
+  .a2-what-row-content {
+    order: 2 !important;
+    padding: 44px 5vw;
+    border-right: none !important;
+  }
+  .a2-what-row-content h3 { font-size: clamp(20px, 6vw, 30px); }
+  .a2-what-row-content p { font-size: 15px; }
+
+  .a2-journey { padding: 64px 0; }
+  .a2-journey-inner { grid-template-columns: 1fr; gap: 36px; padding: 0 5vw; }
+  .a2-journey-head { position: static; }
+  .a2-journey-head h2 { font-size: clamp(26px, 7vw, 38px); }
+  .a2-acc-title { font-size: 16px; }
+  .a2-acc-header { gap: 12px; padding: 20px 0; }
+
+  .a2-cta { padding: 80px 5vw; }
+  .a2-cta-body h2 { font-size: clamp(28px, 8vw, 42px); }
+  .a2-cta-body p { font-size: 15px; }
+  .btn-wa-lg { font-size: 15px !important; padding: 14px 28px !important; }
+}

@@ -8,11 +8,10 @@ const WA_SVG = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><pat
 
 function injectNav(activePage) {
   const pages = [
-    { id: 'home',     label: 'Home',     href: 'index.html'   },
-    { id: 'services', label: 'Services', href: 'services.html'},
-    { id: 'about-v2', label: 'About', href: 'about-v2.html' },
-    { id: 'contact',  label: 'Contact',  href: 'contact.html' },
-    
+    { id: 'home',     label: 'Home',     href: 'index.html'    },
+    { id: 'services', label: 'Services', href: 'services.html' },
+    { id: 'about-v2', label: 'About',    href: 'about-v2.html' },
+    { id: 'contact',  label: 'Contact',  href: 'contact.html'  },
   ];
 
   const links = pages.map(p =>
@@ -20,19 +19,26 @@ function injectNav(activePage) {
   ).join('');
 
   document.getElementById('nav-placeholder').innerHTML = `
-    <nav class="nav">
+    <nav class="nav" id="main-nav">
       <a href="index.html" class="nav-logo">
         <img src="logo.png" alt="The Hospital Care"
              onerror="this.style.display='none';this.nextElementSibling.style.display='block'"/>
         <span class="nav-logo-fallback">The Hospital Care</span>
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="nav-links">
         ${links}
         <a href="${WA_HREF}" target="_blank" class="nav-cta">
           ${WA_SVG}<span>Chat with us</span>
         </a>
       </div>
+      <button class="nav-hamburger" id="nav-hamburger" onclick="toggleNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>`;
+}
+
+function toggleNav() {
+  document.getElementById('main-nav').classList.toggle('open');
 }
 
 function injectFooter() {
@@ -64,7 +70,7 @@ function injectFooter() {
         <div class="footer-col">
           <div class="footer-col-h">Contact</div>
           <a href="tel:+917349491918">+91 73494 91918</a>
-          <a href="mailto:hello@thehospitalcare.in">hello@thehospitalcare.in</a>
+          <a href="mailto:pk@thehospitalcare.in">pk@thehospitalcare.in</a>
           <a>Bengaluru, India</a>
         </div>
       </div>

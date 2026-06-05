@@ -473,20 +473,93 @@ button { cursor: pointer; font-family: var(--sans); }
 
 /* ══════════════════════════════════════
    RESPONSIVE
-══════════════════════════════════════ */
+══════════════════════════════════════ *//* ── HAMBURGER ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+
+.nav.open .nav-hamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav.open .nav-hamburger span:nth-child(2) {
+  opacity: 0;
+}
+.nav.open .nav-hamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 640px) {
-  .nav { height: 76px; }
+@media (max-width: 768px) {
+  .nav { padding: 0 5vw; height: 72px; }
   .nav-logo img { height: 52px; }
-  .nav-links { gap: 2px; }
-  .nav-link  { padding: 7px 12px; font-size: 14px; }
-  .nav-cta span { display: none; }
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .nav-hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 72px; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.98);
+    backdrop-filter: blur(10px);
+    padding: 40px 6vw;
+    gap: 8px;
+    z-index: 998;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .nav.open .nav-links {
+    display: flex;
+  }
+
+  .nav.open .nav-link {
+    font-size: 22px;
+    padding: 16px 0;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    color: var(--text);
+  }
+
+  .nav.open .nav-cta {
+    margin-top: 16px;
+    font-size: 16px;
+    padding: 14px 24px;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
   .strip-body { padding: 64px 5vw; }
+  .strip-body.right { text-align: left; }
+  .strip-body.right .sec-label { flex-direction: row; }
+  .strip-body.right .sec-label::before { order: 0; }
   html { font-size: 16px; }
+}
+
+@media (max-width: 640px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .strip h2 { font-size: clamp(24px, 7vw, 36px); }
+  .strip p { font-size: 15px; }
 }
 
 .wa-icon { display: inline-flex; }

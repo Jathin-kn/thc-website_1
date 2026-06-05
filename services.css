@@ -259,3 +259,25 @@
   .svc-card { border-right: none !important; }
   .svc-section { padding: 64px 5vw 0; }
 }
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .svc-hero { min-height: 60vh; }
+  .svc-hero-body { padding: 0 5vw 64px; }
+  .svc-hero-body h1 { font-size: clamp(28px, 8vw, 42px); }
+  .svc-hero-body p { font-size: 15px; }
+
+  .svc-section { padding: 56px 4vw 0; }
+  .svc-intro .sec-h { font-size: clamp(24px, 7vw, 34px); }
+
+  .svc-grid { grid-template-columns: 1fr; border-radius: 0; margin-bottom: 0; }
+  .svc-card { border-right: none !important; }
+  .svc-card:nth-child(3n) { border-right: none; }
+  .svc-card-inner { padding: 28px 20px; }
+  .svc-text h3 { font-size: 18px; }
+
+  .svc-cta-strip { padding: 72px 5vw; }
+  .svc-cta-body h2 { font-size: clamp(24px, 7vw, 36px); }
+  .svc-cta-body p { font-size: 15px; }
+  .btn-wa-lg { font-size: 15px !important; padding: 14px 28px !important; }
+}
